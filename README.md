@@ -2,6 +2,7 @@
 Это тестовое задание, написать скрипт, который будет мониторить тестовый процесс каждую минуту
 
 Systemd Unit сервис для скрипта:
+`sudo nano /etc/systemd/system/test-monitoring.service`
 ```bash
 [Unit]
 Description=Monitoring Process "test"
@@ -15,6 +16,7 @@ ExecStart=/usr/local/bin/test-script.sh
 WantedBy=multi-user.target
 ```
 Systemd Timer для systemd Unit:
+`sudo nano /etc/systemd/system/test-monitoring.timer`
 ```bash
 [Unit]
 Description=Run Monitoring Process "test" every minute
