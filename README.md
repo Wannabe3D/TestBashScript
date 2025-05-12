@@ -1,7 +1,7 @@
 # TestBashScript
 This test Bash script for monitoring test process every minute
 
-Systemd Unit service for script
+Systemd Unit service for script:
 ```bash
 [Unit]
 Description=Monitoring Process "test"
@@ -14,7 +14,7 @@ ExecStart=/usr/local/bin/test-script.sh
 [Install]
 WantedBy=multi-user.target
 ```
-Systemd Timer for systemd Unit
+Systemd Timer for systemd Unit:
 ```bash
 [Unit]
 Description=Run Monitoring Process "test" every minute
