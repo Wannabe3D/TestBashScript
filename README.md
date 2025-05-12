@@ -1,6 +1,7 @@
 # TestBashScript
 This test Bash script for monitoring test process every minute
 
+Systemd Unit service for script
 ```bash
 [Unit]
 Description=Monitoring Process "test"
@@ -13,7 +14,7 @@ ExecStart=/usr/local/bin/test-script.sh
 [Install]
 WantedBy=multi-user.target
 ```
-
+Systemd Timer for systemd Unit
 ```bash
 [Unit]
 Description=Run Monitoring Process "test" every minute
@@ -26,3 +27,10 @@ Unit=test-monitoring.service
 [Install]
 WantedBy=timers.target
 ```
+Start commands for running and debugging:
+`systemctl daemon-reload`
+`systemctl enable test-monitoring.service` 
+`systemctl start test-monitoring.service`
+`systemctl status test-monitoring.service`
+`sudo systemctl enable test-monitoring.timer`
+`sudo systemctl start test-monitoring.timer`
