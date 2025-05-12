@@ -32,5 +32,5 @@ Start commands for running and debugging:
 `systemctl enable test-monitoring.service` 
 `systemctl start test-monitoring.service`
 `systemctl status test-monitoring.service`
-`sudo systemctl enable test-monitoring.timer`
-`sudo systemctl start test-monitoring.timer`
+`systemctl enable test-monitoring.timer`
+`systemctl start test-monitoring.timer`
